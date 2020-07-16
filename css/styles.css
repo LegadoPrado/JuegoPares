@@ -1,0 +1,179 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background: url("/assets/img/fondo.png") repeat center center;
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+}
+
+.container {
+    width: 1200px;
+    height: 600px;
+    margin: 0 auto auto auto;
+    border: 1px solid rgb(114, 114, 114);
+    border-radius: 0 0 5px 5px;
+    background-color: rgba(223, 223, 223, 0.226);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.encabezado {
+    padding: 5px;
+    width: 1200px;
+    font-size: 1.3rem;
+    border-radius: 5px 5px 0 0;
+    margin: auto auto 0 auto;
+    background-color: rgba(223, 223, 223, 0.226);
+    border: 1px solid rgb(114, 114, 114);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}
+
+.carta {
+    pointer-events: none;
+    opacity: .2;
+    margin: .63rem;
+    width: 7.5rem;
+    height: 10.94rem;
+    border-radius: .63rem;
+    cursor: pointer;
+    transition: 1s ease all;
+}
+
+.carta.iniciado {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.carta.abajo {
+    background: url("/assets/img/img-pares/reverso.png") repeat center center;
+    background-size: contain;
+}
+
+.btn-juego {
+    background-color: rgb(58, 148, 170);
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    outline: none;
+}
+
+.btn-juego:hover {
+    background-color: rgb(45, 127, 148);
+}
+
+.btn-juego:active {
+    background-color: rgb(34, 109, 128);
+}
+
+.btn-juego:disabled {
+    opacity: .3;
+    pointer-events: none;
+}
+
+.btn-juego.detener {
+    background-color: rgb(185, 79, 60);
+}
+
+.btn-juego.detener:hover {
+    background-color: rgb(168, 69, 52);
+}
+
+.btn-juego.detener:active {
+    background-color: rgb(150, 57, 41);
+}
+
+.btn-juego.reiniciar {
+    background-color: rgb(129, 60, 185);
+}
+
+.btn-juego.reiniciar:hover {
+    background-color: rgb(115, 48, 170);
+}
+
+.btn-juego.reiniciar:active {
+    background-color: rgb(115, 48, 170);
+}
+
+.perdiste {
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    transition: 1s ease all;
+    top: 50%;
+    color: red;
+    font-size: 0rem;
+    width: 100%;
+    display: flex;
+    opacity: 1;
+}
+
+.perdiste.activo {
+    font-size: 5rem;
+    display: flex;
+    opacity: 1;
+}
+
+.ganaste {
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    transition: 1s ease all;
+    top: 50%;
+    color: white;
+    font-size: 0rem;
+    width: 100%;
+    display: flex;
+    opacity: 1;
+}
+
+.ganaste.activo{
+    font-size: 5rem;
+    display: flex;
+    opacity: 1;
+}
+
+.img-fruta {
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    opacity: 0;
+    border-radius: .63rem;
+    transition: .7s ease all;        
+}
+
+.img-fruta.activo {
+    opacity: 1;    
+}
+
+.deshabilitar{
+    pointer-events: none !important;
+}
+
+img {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;    
+    user-drag: none;
+  }

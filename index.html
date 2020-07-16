@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pares</title>
+
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <div class="encabezado">
+      <div><span>Juego de Memoria</span></div>
+      <div>
+        <span>Tiempo restante: <span id="tiempo"></span></span>
+      </div>
+      <div>
+        <button id="iniciar" class="btn-juego">Iniciar</button>
+        <button id="detener" disabled class="btn-juego detener">detener</button>
+        <button id="reiniciar" disabled class="btn-juego reiniciar">reiniciar</button>
+      </div>
+    </div>
+    <div class="container" id="tablero"></div>
+    <div id="perdiste" class="perdiste"><span>Fin del Juego Perdiste</span></div>
+    <div id="ganaste" class="ganaste"><span>Felicidades <br> GANASTE!!!</span></div>
+    <script src="/js/pares.js"></script>
+  </body>
+</html>
